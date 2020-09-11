@@ -49,8 +49,13 @@ const createMD = async ({ agilityClient, isPreview }) => {
 		const author = authors.find(a => a.contentID == authorID);
 
 
+		let imageSrc = null
+		if (post.fields.image) {
+			//let's make the image field a little smaller...
+			imageSrc = `${post.fields.image.url}?w=800`
+		}
 
-		let imageSrc = post.fields.image.url
+
 		let slug = post.fields.slug
 		try {
 
@@ -62,6 +67,7 @@ const createMD = async ({ agilityClient, isPreview }) => {
 				date: post.fields.date,
 				category: category ? category.fields.title : null,
 				author: author ? author.fields.name : null,
+				featured_image: imageSrc,
 				draft: isPreview
 			}
 
@@ -69,7 +75,7 @@ const createMD = async ({ agilityClient, isPreview }) => {
 
 			const mdBody = turndownService.turndown(post.fields.content)
 
-			const md = `---\r\n${fmStr}\r\n---\r\n${mdBody}\r\n`
+			const md = `---\n${fmStr}\n---\r\n${mdBody}\r\n`
 
 			fs.writeFileSync(filepath, md)
 

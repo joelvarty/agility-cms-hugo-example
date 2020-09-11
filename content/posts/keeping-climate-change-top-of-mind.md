@@ -3,7 +3,9 @@ title: Keeping Climate Change Top of Mind
 date: '2020-07-22T15:41:06-04:00'
 category: Environment
 author: John Appleseed
-draft: false
+featured_image: >-
+  https://3440d72f-cdn.agilitycms.cloud/posts/martin-jeon-49YjkNjoilg-unsplash.jpg
+draft: true
 
 ---
 Diam volutpat commodo

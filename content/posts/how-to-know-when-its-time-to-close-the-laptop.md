@@ -3,7 +3,9 @@ title: How to know when it's time to close the laptop
 date: '2020-07-22T15:38:19-04:00'
 category: Wellness
 author: John Appleseed
-draft: false
+featured_image: >-
+  https://3440d72f-cdn.agilitycms.cloud/posts/alizee-baudez-a4Nid9fLLlo-unsplash.jpg
+draft: true
 
 ---
 Lorem ipsum dolor sit amet

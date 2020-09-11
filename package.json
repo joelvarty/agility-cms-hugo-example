@@ -2,7 +2,7 @@
 	"name": "hugo-with-agility-cms",
 	"scripts": {
 		"prestart": "node agility/agility.sync.js sync preview",
-		"start": "hugo server",
+		"start": "hugo server -D",
 		"prebuild": "node agility/agility.sync.js sync live",
 		"build": "hugo --minify",
 		"cms-clear": "node agility/agility.sync.js clear"
