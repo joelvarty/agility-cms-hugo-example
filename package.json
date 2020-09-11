@@ -1,0 +1,15 @@
+{
+	"name": "hugo-with-agility-cms",
+	"scripts": {
+		"prestart": "node agility/agility.sync.js sync preview",
+		"start": "hugo server",
+		"prebuild": "node agility/agility.sync.js sync live",
+		"build": "hugo --minify",
+		"cms-clear": "node agility/agility.sync.js clear"
+	},
+	"dependencies": {
+		"@agility/content-sync": "^0.1.8",
+		"js-yaml": "^3.14.0",
+		"turndown": "^6.0.0"
+	}
+}
